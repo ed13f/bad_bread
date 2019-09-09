@@ -290,7 +290,7 @@ input {
 #home-main-content{
 	flex:2;
 	font-size:2rem;
-	margin-right: 2.5%;
+	/*margin-right: 2.5%;*/
 }
 #aside-hours{
 	flex:1;
@@ -315,22 +315,59 @@ input {
 	padding-left:5%;
 	margin: 30px 0 5px;
 }
+.home-image-article{
+	display:flex;
+	background-color: #efede7;
+
+}
+#home-main-content article:nth-child(2){
+	padding-bottom:25px;
+
+}
+#home-main-content article:nth-child(even){
+	flex-direction: row-reverse;
+	/*background-color:#ede9de*/
+}
+/*#home-main-content article:nth-child(even) .homepage-content-conainer{
+	background-color:#ddd3b8;
+}
+#home-main-content article:nth-child(3) .homepage-content-conainer{
+	background-color:#e8e1d0;
+}*/
+.homepage-content-conainer{
+	flex:1;
+	
+
+}
+.home-content-wrapper{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding:0 5%;
+}
 .home-image-article p {
-	margin:1rem 1rem 4rem;
+	margin:1rem 1rem 2rem;
 
 }
 .home-image-container{
+	height:350px;
 	position:relative;
 	overflow: hidden;
+	flex:1;
 }
 .home-page-img{
-	width:100%;
-	height: initial;
+	height:100%;
+	position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
 }
 .home-link-page{
-	position:absolute;
+	/*position:absolute;
 	bottom:20%;
-	right: -115px;
+	right: -115px;*/
 	/*right: 8%;*/
 	/*display:none;*/
 	background-color: rgba(65,57,86, 0.8);
@@ -338,7 +375,7 @@ input {
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
-  	transition: right 0.75s;
+  	/*transition: right 0.75s;*/
 }
 .home-link-page.slideRight{
 	right:50px;
@@ -346,14 +383,20 @@ input {
 .home-link-page:hover{
 	color: #7D7596;
 }
+.anchor-wrapper{
+	text-align:right;
+	padding:0 10%;
+}
 .home-image-title{
-	position:absolute;
+	/*position:absolute;
 	left: 12%;
-	top:5%;
-	z-index: 2;
-	color:white;
+	top:5%;*/
+	/*z-index: 2;*/
+	/*color:white;*/
+	color: rgba(125,117,150);
 	font-size:2em;
-	text-shadow: 0px 0px 10px #000000;
+	margin-top:0;
+	/*text-shadow: 0px 0px 10px #000000;*/
 }
 .home-image-screen{
 	position: absolute;
@@ -443,6 +486,7 @@ input {
 	font-size:2rem;
 	margin:0;
 	line-height: 2rem;
+	list-style-type: square;
 }
 .service-article li{
 	margin: 1rem 0;
@@ -473,6 +517,7 @@ input {
 }
 #about-locations-content ul{
 	font-size:1.75rem;
+	list-style-type: square;
 }
 #about-locations-content li{
 	line-height:1.5rem;
@@ -633,7 +678,42 @@ input:focus {
 	}
 	.submit{
 		min-width:initial;
-		/*padding-top:17px !important;*/
+	}
+	.home-image-container{
+    	flex: initial;
+    	height:initial;
+	}
+	.home-page-img{
+		 height: initial; 
+	     position: relative; 
+	     top: initial; 
+	     bottom: initial; 
+	     left: initial; 
+	     right: initial; 
+	     margin: initial; 
+	     width:100%;
+	}
+	.home-image-article{
+		background:transparent;
+		padding:30px 0;
+		flex-direction: column !important;
+
+	}
+	#home-main-content article:nth-child(2){
+		padding-bottom:0;
+	}
+	.home-content-wrapper{
+		padding:0;
+	}
+	.home-image-title{
+		margin-top:20px;
+	}
+	.services-section img{
+		width: 92%;
+    	padding: 0 4%;
+	}
+	main{
+		padding-top:0;
 	}
 }
 @media screen and (max-width: 650px){
@@ -698,6 +778,7 @@ input:focus {
 	width: 255px;
 	margin:0 auto;
 	padding: 0;
+	list-style-type: square;
 }
 #hours-wrapper li{
 	line-height:2rem;
@@ -913,7 +994,7 @@ label[for="mode"]{
 	color:white;
 	text-align:center;
 	padding:1rem 0;
-	font-size: 1.25rem;
+	font-size: 1rem;
 }
 /*FOOTER END*/
 @media screen and (max-width: 820px) and (orientation: landscape){
@@ -1052,6 +1133,7 @@ label[for="mode"]{
   .service-article ul{
   	    max-width: 300px;
   	    margin:auto;
+  	    list-style-type: square;
   }
   .home-link-page{
   	font-size:2rem;
@@ -1061,6 +1143,7 @@ label[for="mode"]{
     }
     #aside-hours ul{
     	width:initial;
+    	list-style-type: square;
     }
   /*about us end*/
  }
@@ -1118,6 +1201,7 @@ label[for="mode"]{
  	.service-article ul{
   	    max-width: 90%;
   	    margin:auto;
+  	    list-style-type: square;
     }
     .service-article li{
     	/*font-size: 1.5rem;*/
@@ -1125,9 +1209,9 @@ label[for="mode"]{
     }
 
     .services-section h2{
-    	margin:1rem 0;
+    	margin:1rem;
     	top:1%;
-    	font-size:3.5rem;
+    	font-size:2.8rem;
     }
     .logo{
     	width: 35%;

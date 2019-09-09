@@ -30,7 +30,7 @@
 	    </section>	
 	    <section id="Repairs-remodels" class="services-section">
 	    	<img class="section-image" src="<?php the_field('repairs_and_remodels_image'); ?>" />
-	    	<h2 class="section-header">Unique Combinations</h2>
+	    	<h2 class="section-header">Unique dishes</h2>
 	    	<article class="flex service-article content-width">
 		    	<p class="content-gutter content"><?php the_field('repair_and_remodel_content')?></p>
 		    	<artcile class="service-article-container">
