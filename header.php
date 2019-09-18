@@ -22,8 +22,12 @@
       <div class="hero-screen"></div>
             <nav>
         <article class="nav-container mobile-nav-container">
+          <!-- <div class="nav-click-to-call"><a href="tel:+15613153658">561.315.3658</a></div> -->
           <div class="nav-wrapper">
-            <!-- <a class="nav-bar-logo" href="http://localhost:8888/pool-site-1/" ><img src="http://localhost:8888/pool-site-1/wp-content/uploads/2018/03/5-star-white.png" alt="logo"></a> -->
+
+            <div class="nav-logo">
+              <a href="http://localhost/bad_bread/"><img src="http://bad-bread.ricodesantis.com/wp-content/uploads/2019/09/bb_logo-ko.png" alt="Bad Bread Logo" class="menu-logo"></a>
+             </div> 
             <?php
               $defaults = array(
                 'container' => 'div',
@@ -33,7 +37,7 @@
               wp_nav_menu($defaults);
             ?>
             <div class='mobile-nav'>
-              <div id="mobile-menu-hide"><span>&times;</span></div>
+              <!-- <div id="mobile-menu-hide"><span>&times;</span></div> -->
             <?php
               $defaults = array(
                 // 'container' => 'div',
@@ -43,11 +47,13 @@
               wp_nav_menu($defaults);
             ?>
             </div>
-            <div id="mobile-menu-show">&#9776;</div>
+            <button value="mobile-menu-icon" name="mobile-menu-icon" type="mobile-menu-icon" class="mobile-menu-button" tabindex="-1">
+              <div id="menu-line-1" class="mobile-menu-line"></div>
+              <div id="menu-line-2" class="mobile-menu-line"></div>
+              <div id="menu-line-3" class="mobile-menu-line"></div>
+            </button>
             
-            <ul id="right-sub-nav">
-              <li> <a href="tel:<?php the_field('phone_number');?>"> &#x2706;</a></li>
-            </ul>
+            
           </div>
         </article>
       </nav>

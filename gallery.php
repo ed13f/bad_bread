@@ -22,7 +22,8 @@
 		<?php $count = 0; ?>
 		<div id="gallery-wrapper">
 			<?php if( $gallery->have_posts() ) : while( $gallery->have_posts() ) : $gallery->the_post(); ?>
-				<article id="image-card" class='gallery-img image-hover'>
+				<article id="image-card" class='gallery-img'>
+					<div class="photo-screen image-hover"></div>
 					<img id="image-<?php echo $count ?>" src="<?php the_field('image') ?>" >
 					<h2><?php echo get_the_title(); ?></h2>
 				</article>
